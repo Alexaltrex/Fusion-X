@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/Fusion-X/static/css/main.073c9b0a.css",
+    "main.js": "/Fusion-X/static/js/main.5357ace6.js",
+    "static/js/787.c40c1505.chunk.js": "/Fusion-X/static/js/787.c40c1505.chunk.js",
+    "static/media/logo.svg": "/Fusion-X/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/Fusion-X/index.html",
+    "main.073c9b0a.css.map": "/Fusion-X/static/css/main.073c9b0a.css.map",
+    "main.5357ace6.js.map": "/Fusion-X/static/js/main.5357ace6.js.map",
+    "787.c40c1505.chunk.js.map": "/Fusion-X/static/js/787.c40c1505.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.5357ace6.js"
+  ]
+}
