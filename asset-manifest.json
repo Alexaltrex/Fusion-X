@@ -1,18 +1,20 @@
 {
   "files": {
-    "main.css": "/Fusion-X/static/css/main.13e363fc.css",
-    "main.js": "/Fusion-X/static/js/main.cee87b5c.js",
+    "main.css": "/Fusion-X/static/css/main.8af9a5c7.css",
+    "main.js": "/Fusion-X/static/js/main.a53e5c0a.js",
     "static/js/787.c40c1505.chunk.js": "/Fusion-X/static/js/787.c40c1505.chunk.js",
     "static/media/2.png": "/Fusion-X/static/media/2.be34333f7235b94727c5.png",
     "static/media/3.png": "/Fusion-X/static/media/3.9fbd4eb543e841dae773.png",
     "static/media/1.png": "/Fusion-X/static/media/1.e9c49422d88dba6dd9d8.png",
+    "static/media/desktop.png": "/Fusion-X/static/media/desktop.fea3d43d5e4d9653d394.png",
+    "static/media/0.png": "/Fusion-X/static/media/0.72be1df624e86cb408d4.png",
     "index.html": "/Fusion-X/index.html",
-    "main.13e363fc.css.map": "/Fusion-X/static/css/main.13e363fc.css.map",
-    "main.cee87b5c.js.map": "/Fusion-X/static/js/main.cee87b5c.js.map",
+    "main.8af9a5c7.css.map": "/Fusion-X/static/css/main.8af9a5c7.css.map",
+    "main.a53e5c0a.js.map": "/Fusion-X/static/js/main.a53e5c0a.js.map",
     "787.c40c1505.chunk.js.map": "/Fusion-X/static/js/787.c40c1505.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.13e363fc.css",
-    "static/js/main.cee87b5c.js"
+    "static/css/main.8af9a5c7.css",
+    "static/js/main.a53e5c0a.js"
   ]
 }
