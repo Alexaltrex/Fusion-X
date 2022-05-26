@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Fusion-X/static/css/main.59cc0b2f.css",
-    "main.js": "/Fusion-X/static/js/main.47057dd7.js",
+    "main.css": "/Fusion-X/static/css/main.efdd2f39.css",
+    "main.js": "/Fusion-X/static/js/main.99c9839e.js",
     "static/js/787.c40c1505.chunk.js": "/Fusion-X/static/js/787.c40c1505.chunk.js",
     "static/media/2.png": "/Fusion-X/static/media/2.be34333f7235b94727c5.png",
     "static/media/3.png": "/Fusion-X/static/media/3.9fbd4eb543e841dae773.png",
@@ -11,12 +11,12 @@
     "static/media/left.png": "/Fusion-X/static/media/left.3c4419d8e20058e814b4.png",
     "static/media/right.png": "/Fusion-X/static/media/right.c77aaccf36a0e06be773.png",
     "index.html": "/Fusion-X/index.html",
-    "main.59cc0b2f.css.map": "/Fusion-X/static/css/main.59cc0b2f.css.map",
-    "main.47057dd7.js.map": "/Fusion-X/static/js/main.47057dd7.js.map",
+    "main.efdd2f39.css.map": "/Fusion-X/static/css/main.efdd2f39.css.map",
+    "main.99c9839e.js.map": "/Fusion-X/static/js/main.99c9839e.js.map",
     "787.c40c1505.chunk.js.map": "/Fusion-X/static/js/787.c40c1505.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.59cc0b2f.css",
-    "static/js/main.47057dd7.js"
+    "static/css/main.efdd2f39.css",
+    "static/js/main.99c9839e.js"
   ]
 }
