@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Fusion-X/static/css/main.744b9ae6.css",
+    "main.css": "/Fusion-X/static/css/main.8aac4f74.css",
     "main.js": "/Fusion-X/static/js/main.7f9be68e.js",
     "static/js/787.c40c1505.chunk.js": "/Fusion-X/static/js/787.c40c1505.chunk.js",
     "static/media/half-sphere.png": "/Fusion-X/static/media/half-sphere.8217f95350bde804ed5f.png",
@@ -17,12 +17,12 @@
     "static/media/left.png": "/Fusion-X/static/media/left.3c4419d8e20058e814b4.png",
     "static/media/right.png": "/Fusion-X/static/media/right.c77aaccf36a0e06be773.png",
     "index.html": "/Fusion-X/index.html",
-    "main.744b9ae6.css.map": "/Fusion-X/static/css/main.744b9ae6.css.map",
+    "main.8aac4f74.css.map": "/Fusion-X/static/css/main.8aac4f74.css.map",
     "main.7f9be68e.js.map": "/Fusion-X/static/js/main.7f9be68e.js.map",
     "787.c40c1505.chunk.js.map": "/Fusion-X/static/js/787.c40c1505.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.744b9ae6.css",
+    "static/css/main.8aac4f74.css",
     "static/js/main.7f9be68e.js"
   ]
 }
