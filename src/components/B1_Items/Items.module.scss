@@ -1,0 +1,177 @@
+@import "../../assets/scss/app";
+
+.items {
+
+  @include container;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 60px;
+
+  @include desktop {
+    padding-top: 160px;
+  }
+
+  .borderWrapper {
+    border-top: 1px solid #35363F;
+    border-bottom: 1px solid #35363F;
+
+    .inner {
+      @include inner;
+
+      .swiperMobile {
+        @include onlyMobile;
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        .slide {
+          cursor: pointer;
+          width: 215px;
+          @include centerRow;
+          position: relative;
+
+          &::after {
+            position: absolute;
+            content: "";
+            display: block;
+            top: 50%;
+            right: 0;
+            width: 1px;
+            height: 70px;
+            transform: translateY(-50%);
+            background: radial-gradient(rgba(53, 54, 63, 1), rgba(53, 54, 63, 0.23));
+          }
+
+          & > div:nth-child(1) {
+            width: 60px;
+            height: 60px;
+            background: #1F1F1F;
+            border-radius: 7.5px;
+            @include centerRow;
+
+            img {
+              display: block;
+              width: 30px;
+              height: 30px;
+            }
+          }
+
+          & > div:nth-child(2) {
+            margin-left: 14px;
+
+            & > p:nth-child(1) {
+              font-weight: 600;
+              font-size: 15px;
+              line-height: 140%;
+            }
+
+            & > p:nth-child(2) {
+              margin-top: 2px;
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 140%;
+              color: rgba(255, 255, 255, 0.5);
+            }
+
+          }
+
+        }
+
+      }
+
+
+      .cardsDesktop {
+        @include onlyDesktop(grid);
+        padding: 25px 0;
+        grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: 50px;
+
+        .card {
+          cursor: pointer;
+          height: 130px;
+          //background: red;
+          @include centerRow;
+          border-radius: 12px;
+          transition: 0.3s;
+          position: relative;
+
+          &:not(:last-child) {
+            &::after {
+              position: absolute;
+              content: "";
+              display: block;
+              top: 50%;
+              right: 0;
+              width: 1px;
+              height: 113px;
+              transform: translateY(-50%);
+              background: radial-gradient(rgba(53, 54, 63, 1), rgba(53, 54, 63, 0.23));
+
+            }
+          }
+
+          &:hover {
+            background: #4056D8;
+            box-shadow: 0px 10px 40px rgba(17, 23, 46, 0.25);
+          }
+
+          & > div:nth-child(1) {
+            width: 80px;
+            height: 80px;
+            background: #1F1F1F;
+            border-radius: 10px;
+            @include centerRow;
+
+            img {
+              display: block;
+              width: 30px;
+              height: 30px;
+            }
+          }
+
+          & > div:nth-child(2) {
+            margin-left: 20px;
+
+            & > p:nth-child(1) {
+              font-weight: 600;
+              font-size: 20px;
+              line-height: 140%;
+            }
+
+            & > p:nth-child(2) {
+              margin-top: 4px;
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 140%;
+              color: rgba(255, 255, 255, 0.5);
+            }
+
+          }
+
+          &:nth-child(1) div:nth-child(1) img {
+            width: 39px;
+            height: 40px;
+          }
+
+          &:nth-child(2) div:nth-child(1) img {
+            width: 30px;
+            height: 30px;
+          }
+
+          &:nth-child(3) div:nth-child(1) img {
+            width: 26px;
+            height: 36.92px;
+          }
+
+          &:nth-child(4) div:nth-child(1) img {
+            width: 34px;
+            height: 34px;
+          }
+
+        }
+      }
+
+    }
+
+  }
+
+}

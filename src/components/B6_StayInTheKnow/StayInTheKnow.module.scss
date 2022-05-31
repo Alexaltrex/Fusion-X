@@ -1,0 +1,139 @@
+@import "../../assets/scss/app";
+
+.stayInTheKnow {
+  @include container;
+  padding-top: 60px;
+
+  @include desktop {
+    padding-top: 160px;
+  }
+
+  .inner {
+    @include inner;
+
+    .title {
+      @include title;
+      @include desktop {
+        text-align: center;
+        width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    .description {
+      @include description;
+      margin-top: 10px;
+
+      @include desktop {
+        text-align: center;
+        margin-top: 30px;
+      }
+    }
+
+    .card {
+      position: relative;
+      box-sizing: border-box;
+      margin-top: 20px;
+      padding: 16px 16px 50px;
+
+      @include desktop {
+        margin-top: 40px;
+        padding: 48px 70px;
+      }
+
+      .back {
+        @include absoluteStart;
+        z-index: 1;
+        background: linear-gradient(210deg, #FFFFFF -10931.33%, #FEFEFE -10837.85%, #E1E1E1 -8501.04%, #CDCDCD -6164.23%, #C1C1C1 -3827.41%, #BDBDBD -1584.07%);
+        background-blend-mode: overlay;
+        mix-blend-mode: normal;
+        opacity: 0.2;
+        border-radius: 6px;
+
+        @include desktop {
+          border-radius: 16px;
+        }
+      }
+
+      .cardContent {
+        position: relative;
+        z-index: 3;
+
+        display: flex;
+
+        @include desktop {
+          align-items: center;
+          justify-content: space-between;
+        }
+
+        .imgM {
+          @include onlyMobile() {
+            position: absolute;
+            z-index: 2;
+            width: 117.92px;
+            height: 78.61px;
+            left: 128px;
+            bottom: -50px;
+          }
+        }
+
+        .imgD {
+          @include onlyDesktop();
+          width: 525px;
+          height: 355px;
+        }
+
+        .infoBlock {
+
+          @include desktop {
+            width: 550px;
+          }
+
+          .infoBlockTitle {
+            //width: 100%;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 130%;
+            letter-spacing: 0.04em;
+
+            @include desktop {
+              font-size: 40px;
+            }
+          }
+
+          .infoBlockDescription {
+            margin-top: 10px;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 140%;
+
+            @include desktop {
+              margin-top: 30px;
+              font-size: 20px;
+            }
+          }
+
+          button {
+            position: relative;
+            z-index: 4;
+            margin-top: 20px;
+            width: 200px;
+
+            @include desktop {
+              margin-top: 50px;
+            }
+          }
+
+        }
+
+
+      }
+
+    }
+
+
+  }
+
+
+}

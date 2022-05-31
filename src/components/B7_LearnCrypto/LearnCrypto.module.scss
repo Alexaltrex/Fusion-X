@@ -1,0 +1,121 @@
+@import "../../assets/scss/app";
+
+.learnCrypto {
+  @include container;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @include desktop {
+    padding-top: 160px;
+    padding-bottom: 160px;
+  }
+
+  .inner {
+    @include inner;
+    position: relative;
+
+    @include desktop {
+      width: 1320px;
+    }
+
+    .flyCoin {
+      //@include onlyDesktop();
+      top: -25px;
+      right: 190px;
+      transform: scale(0.4);
+
+      @include desktop {
+        top: -60px;
+        right: 425px;
+        transform: scale(1);
+      }
+
+    }
+
+    .title {
+      @include title;
+      @include desktop {
+        text-align: center;
+        width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    .swiper {
+      @include onlyMobile();
+      margin-top: 20px;
+
+      .slide {
+        width: 272px;
+      }
+    }
+
+    .cardsDesktop {
+      margin-top: 50px;
+      @include onlyDesktop(grid);
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .controlBlock {
+      margin-top: 30px;
+      @include onlyMobile(flex);
+      align-items: center;
+
+      .btn {
+        @include button;
+        width: 40px;
+        height: 40px;
+        background: #4056D8;
+        border-radius: 7px;
+        @include centerRow;
+
+        svg {
+          width: 16px;
+          height: 16px;
+        }
+
+        &_right {
+          svg {
+            transform: rotate(180deg);
+          }
+        }
+
+
+      }
+
+      .status {
+        position: relative;
+        margin: 0 12px;
+        flex-grow: 1;
+        height: 14px;
+        background: linear-gradient(304.62deg, #26282C -14.56%, #282A2E 81.46%);
+        box-shadow: inset -4px -4px 10px rgba(255, 255, 255, 0.05), inset 4px 4px 10px #1A1B1E;
+        border-radius: 77px;
+
+        .move {
+          position: absolute;
+          top: 3px;
+          background: #4056D8;
+          border-radius: 4px;
+          height: 8px;
+          transition: 300ms;
+        }
+      }
+
+    }
+
+    .viewBtn {
+      margin-top: 40px;
+
+      @include desktop {
+        margin-top: 80px;
+        width: 260px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+  }
+
+}

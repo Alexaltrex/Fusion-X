@@ -1,0 +1,102 @@
+.coinWrapper {
+  animation-name: coinWrapperAnimation;
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+}
+
+
+.wingFirstLeft {
+  animation-name: wingFirstLeftAnimation;
+  animation-iteration-count: infinite;
+  animation-duration: 0.2s;
+  animation-timing-function: linear;
+  transform-origin: 36px 43px;
+}
+
+.wingFirstRight {
+  animation-name: wingFirstRightAnimation;
+  animation-iteration-count: infinite;
+  animation-duration: 0.2s;
+  animation-timing-function: linear;
+  transform-origin: 0px 38px;
+}
+
+.wingSecondLeft {
+  animation-name: wingSecondLeftAnimation;
+  animation-iteration-count: infinite;
+  animation-duration: 0.2s;
+  animation-timing-function: linear;
+  transform-origin: 34px 34px;
+}
+
+.wingSecondRight {
+  animation-name: wingSecondRightAnimation;
+  animation-iteration-count: infinite;
+  animation-duration: 0.2s;
+  animation-timing-function: linear;
+  transform-origin: 4px 34px;
+}
+
+@keyframes coinWrapperAnimation {
+  0% {
+    transform: translate(0,0);
+  }
+  25% {
+    transform: translate(-5px,-25px);
+  }
+  50% {
+    transform: translate(5px,25px);
+  }
+  100% {
+    transform: translate(0,0);
+  }
+}
+
+@keyframes wingFirstLeftAnimation {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(-30deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+@keyframes wingFirstRightAnimation {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(30deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+@keyframes wingSecondLeftAnimation {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(-30deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+@keyframes wingSecondRightAnimation {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(30deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}

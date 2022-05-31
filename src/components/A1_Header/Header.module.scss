@@ -1,0 +1,269 @@
+@import "../../assets/scss/app";
+
+.header {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  right: 0;
+  border-bottom: 1px solid #35363F;
+  @include container;
+
+  .back {
+    position: absolute;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.9);
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 0;
+    transition: 0.3s;
+
+    &_show {
+      height: 100%;
+    }
+  }
+
+  .inner {
+    position: relative;
+    z-index: 2;
+    @include inner;
+
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include desktop {
+      height: 118px;
+    }
+
+    .btn {
+      flex-shrink: 0;
+      @include button;
+      @include onlyMobile(flex);
+      @include centerRow;
+      width: 40px;
+      height: 40px;
+      background: #4056D8;
+      border-radius: 7px;
+    }
+
+    .btnPopover {
+      @include button;
+      padding: 10px 0;
+      display: flex;
+      align-items: center;
+
+      p {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 140%;
+        transition: 0.2s;
+      }
+
+      svg:first-child {
+        margin-right: 7px;
+      }
+
+      svg:last-child path {
+        transition: 0.2s;
+      }
+
+      &_open {
+        p {
+          color: #4056D8;
+        }
+
+        svg:last-child path {
+          fill: #4056D8;
+        }
+      }
+    }
+
+
+    .left {
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+
+      @include desktop {
+        justify-content: normal;
+      }
+
+      .logo {
+        display: block;
+        width: 154px;
+        height: 34px;
+        @include absoluteCenter;
+
+        @include desktop {
+          width: 180px;
+          height: 40px;
+          position: relative;
+          transform: none;
+          top: 0;
+          left: 0;
+        }
+      }
+
+      .menuWrapper {
+        margin-left: 40px;
+        overflow: hidden;
+
+        .menuWrapperInner {
+          position: relative;
+          transition: $duration;
+
+          &_switcher {
+            transform: translateY(-100%);
+          }
+
+          .menu {
+            @include onlyDesktop(flex);
+            align-items: center;
+            //border: 1px solid red;
+            height: 45px;
+
+            &_switcher {
+              position: absolute;
+              left: 0;
+              top: 100%;
+            }
+
+            & > *:not(first-child) {
+              margin-left: 27px;
+            }
+
+            .link {
+              text-decoration: none;
+              transition: 0.2s;
+
+              &:hover {
+                color: #4056D8;
+              }
+            }
+
+
+          }
+
+
+        }
+
+
+      }
+    }
+
+    .right {
+      @include onlyDesktop(flex);
+      align-items: center;
+
+      .btnWrapperLeft {
+        margin-left: 37px;
+        transition: $duration;
+        //overflow: hidden;
+        width: 208px;
+        height: 50px;
+        position: relative;
+
+        &_switcher {
+          //width: 0;
+          display: none;
+        }
+
+        .btnWrapperLeftInner {
+          display: flex;
+          align-items: center;
+          position: absolute;
+          left: 0;
+          top: 0;
+
+          .loginBtn {
+            flex-shrink: 0;
+            @include button;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 140%;
+          }
+
+          .signUpBtn {
+            flex-shrink: 0;
+            margin-left: 30px;
+            width: 130px;
+            height: 50px;
+
+            p {
+              color: #FFF;
+            }
+          }
+        }
+      }
+
+      .btnWrapperRight {
+        margin-left: 60px;
+        flex-shrink: 0;
+        width: 170px;
+        height: 40px;
+        position: relative;
+        transition: $duration;
+        //overflow: hidden;
+        display: none;
+
+
+        &_switcher {
+          display: block;
+        }
+
+        .connectBtn {
+          width: 170px;
+          height: 40px;
+          position: absolute;
+          top: 0;
+          left: 0;
+
+          p {
+            color: #FFF;
+          }
+        }
+      }
+
+
+    }
+  }
+}
+
+.listItem {
+  @include centerRow;
+  height: 34px;
+  cursor: pointer;
+  transition: 0.1s;
+  background: #40433F;
+
+  &_lang {
+    justify-content: start;
+    padding-left: 10px;
+  }
+
+  svg {
+    margin-right: 7px;
+  }
+
+  p {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 140%;
+    text-align: center;
+  }
+
+  &:hover {
+    background: #535957;
+  }
+
+  &_selected {
+    background: #535957;
+  }
+
+}
+

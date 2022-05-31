@@ -1,0 +1,21 @@
+.conic {
+  animation-name: conicAnimation;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes conicAnimation {
+  0% {
+    //background: conic-gradient(from 0deg, red, orange, yellow, green, red);
+    transform: rotate(0deg);
+  }
+  50% {
+    //background: conic-gradient(from 180deg, red, orange, yellow, green, red);
+    transform: rotate(180deg);
+  }
+  100% {
+    //background: conic-gradient(from 360deg, red, orange, yellow, green, red);
+    transform: rotate(360deg);
+  }
+}

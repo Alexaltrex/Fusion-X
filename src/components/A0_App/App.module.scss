@@ -1,0 +1,85 @@
+@import "../../assets/scss/app";
+
+.app {
+  position: relative;
+  overflow: hidden;
+  padding-top: 80px;
+  background: #000;
+  transition: $duration;
+
+  @include desktop {
+    padding-top: 118px;
+  }
+
+  .back1 {
+    position: absolute;
+    transition: $duration;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-image: url(../../assets/png/ellipse.png);
+    background-repeat: repeat;
+    opacity: 0.8;
+  }
+
+  .back2 {
+    position: absolute;
+    transition: $duration;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-image: url(../../assets/png/ellipse2.png);
+    background-repeat: repeat;
+    opacity: 0.8;
+  }
+
+  .back3 {
+    position: absolute;
+    transition: $duration;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-image: url(../../assets/png/ellipse3.png);
+    background-repeat: repeat;
+    opacity: 0.4;
+  }
+
+  .conic {
+    position: fixed;
+    //transition: $duration;
+    z-index: 3;
+    top: -100vh;
+    left: -100vw;
+    bottom: -100vh;
+    right: -100vw;
+    opacity: 0.7;
+    background: conic-gradient(
+                    #b76300, darkblue,
+                    #b76300, darkblue,
+                    #b76300, darkblue,
+                    #b76300, darkblue,
+                    #b76300, darkblue,
+                    #b76300, darkblue,
+                    #b76300, darkblue,
+                    #b76300, darkblue,
+                    #b76300
+    );
+
+  }
+
+  .content {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    z-index: 4;
+  }
+
+
+
+}

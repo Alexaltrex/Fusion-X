@@ -1,0 +1,116 @@
+@import "../../../assets/scss/app";
+
+.buttonCustom {
+  @include button;
+  height: 60px;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 30px;
+
+  background: $blue1;
+  box-shadow: 0 0 31px rgba(255, 255, 255, 0.3);
+
+  transition: 0.3s;
+
+  @include centerRow;
+
+  .content {
+    overflow: hidden;
+    position: relative;
+
+    .contentInner, .contentInner2 {
+      padding: 5px 0;
+      display: flex;
+      align-items: center;
+      transition: 0.3s;
+
+      .label {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 140%;
+        transition: 0.3s;
+      }
+
+      svg {
+        width: 26px;
+        height: 26px;
+        margin-right: 10px;
+
+        path {
+          fill: #4F66EF;
+          transition: 0.3s;
+        }
+      }
+
+    }
+
+    .contentInner {
+      transform: translateY(0%) rotate(0deg);
+      transform-origin: right;
+    }
+
+    .contentInner2 {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      transform: translateY(100%) rotate(90deg);
+      transform-origin: left;
+    }
+
+  }
+
+  &:hover {
+    background: #452DBF;
+
+    .content {
+      .contentInner svg path, .contentInner2 svg path {
+        fill: #FFF;
+      }
+    }
+
+    .contentInner {
+      transform: translateY(-100%) rotate(90deg);
+
+    }
+
+    .contentInner2 {
+      transform: translateY(0%) rotate(0deg);
+    }
+  }
+
+  &_switcher {
+    background: $blue2;
+  }
+
+  &_outlined {
+    background: transparent;
+    border: 1px solid #4F66EF;
+    box-shadow: none;
+    filter: drop-shadow(0px 0px 31px rgba(255, 255, 255, 0.3));
+
+    .label {
+      color: $blue1;
+    }
+
+    &:hover {
+      background: #4056D8;
+      box-shadow: 0 0 31px rgba(255, 255, 255, 0.3);
+
+      .label {
+        color: #FFF;
+      }
+    }
+
+    &_switcher {
+      .label {
+        color: $blue2;
+      }
+    }
+  }
+
+  &_mouseDown {
+    background: #452DBF!important;
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.15)!important;
+    border-color: #452DBF;
+  }
+}

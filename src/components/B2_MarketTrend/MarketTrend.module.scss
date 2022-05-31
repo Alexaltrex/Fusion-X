@@ -1,0 +1,314 @@
+@import "../../assets/scss/app";
+
+.marketTrend {
+  position: relative;
+  @include container;
+  padding-top: 60px;
+
+  @include desktop {
+    padding-top: 160px;
+  }
+
+  .cone {
+    display: block;
+    position: absolute;
+    left: 0px;
+    bottom: -110px;
+    width: 90px;
+
+    @include desktop {
+      width: 270px;
+      left: 0px;
+      bottom: -215px;
+    }
+  }
+
+  .inner {
+    @include inner;
+    position: relative;
+
+    .sphere {
+      position: absolute;
+      z-index: 2;
+      opacity: 0.7;
+      top: -150px;
+      right: -80px;
+      width: 200px;
+      height: auto;
+
+      @include desktop {
+        width: 450px;
+        top: -45px;
+        right: -85px;
+      }
+    }
+
+    .back {
+      z-index: 1;
+      @include absoluteStart;
+      background: linear-gradient(210deg, #FFFFFF -10931.33%, #FEFEFE -10837.85%, #E1E1E1 -8501.04%, #CDCDCD -6164.23%, #C1C1C1 -3827.41%, #BDBDBD -1584.07%);
+      background-blend-mode: overlay;
+      mix-blend-mode: normal;
+      opacity: 0.2;
+      border-radius: 6px;
+
+      @include desktop {
+        border-radius: 16px;
+      }
+    }
+
+    .content {
+      position: relative;
+      z-index: 3;
+
+      .title {
+        border-bottom: 2px solid rgba(198, 192, 199, 0.1);
+        padding: 20px 0;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 130%;
+        letter-spacing: 0.04em;
+        text-align: center;
+
+        @include desktop {
+          padding: 34px 70px;
+          font-size: 40px;
+          text-align: left;
+        }
+      }
+
+      .itemsMobile {
+        @include onlyMobile();
+        padding: 20px 10px;
+
+        .item {
+          display: flex;
+          align-items: center;
+
+          &:not(:first-child) {
+            margin-top: 18px;
+          }
+
+          .icon {
+            display: block;
+            width: 26px;
+            height: 26px;
+          }
+
+          .info {
+            margin: 0 10px;
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .left {
+              & > p {
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 120%;
+
+                &:last-child {
+                  color: rgba(255, 255, 255, 0.5);;
+                }
+              }
+            }
+
+            .right {
+              display: flex;
+              flex-direction: column;
+              align-items: flex-end;
+
+              .price {
+                font-weight: 600;
+                font-size: 12px;
+                line-height: 140%;
+              }
+
+              .changeBlock {
+                margin-top: 1px;
+                display: flex;
+                align-items: center;
+
+                p {
+                  font-weight: 400;
+                  font-size: 9px;
+                  line-height: 140%;
+                  color: #00957B;
+                }
+
+                svg {
+                  margin-left: 2px;
+                  width: 9px;
+                  height: 9px;
+
+                  path {
+                    fill: #00957B;
+                  }
+                }
+
+                &_down {
+                  p {
+                    color: #E63946;
+                  }
+
+                  svg {
+                    transform: rotate(90deg);
+
+                    path {
+                      fill: #E63946;
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+
+          .tradeBtn {
+            @include button;
+            background: linear-gradient(138.1deg, #141414 1.63%, #111111 97.51%);
+            border-radius: 2px;
+            width: 51px;
+            height: 26px;
+            @include centerRow;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 120%;
+          }
+
+
+        }
+
+
+      }
+
+      .itemsDesktop {
+        @include onlyDesktop();
+        padding: 34px 70px;
+
+        .header {
+          display: flex;
+          align-items: center;
+          p {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 28px;
+            color: #7C8793;
+
+            &:nth-child(1) {
+              width: 73px;
+            }
+            &:nth-child(2) {
+              width: 407px;
+            }
+            &:nth-child(3) {
+              width: 293px;
+            }
+            &:nth-child(4) {
+              width: 279px;
+            }
+            &:nth-child(5) {
+              width: 88px;
+            }
+          }
+        }
+
+        .item {
+          margin-top: 40px;
+          display: flex;
+          align-items: center;
+
+          .numberBlock {
+            width: 73px;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 140%;
+            color: rgba(255, 255, 255, 0.5);
+          }
+
+          .nameBlock {
+            width: 407px;
+            display: flex;
+            align-items: center;
+
+            img {
+              display: block;
+              width: 44px;
+              height: 44px;
+            }
+
+            p {
+              margin-left: 10px;
+              font-weight: 400;
+              font-size: 24px;
+              line-height: 140%;
+
+              span {
+                color: rgba(255,255,255, 0.5);
+              }
+            }
+          }
+
+          .priceBlock {
+            width: 293px;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 140%;
+          }
+
+          .changeBlock {
+            width: 279px;
+
+            .card {
+              @include centerRow;
+              width: 144px;
+              height: 44px;
+              background: #00957B;
+              border-radius: 4px;
+
+              p {
+                font-size: 24px;
+                line-height: 140%;
+              }
+
+              svg {
+                margin-left: 7px;
+                width: 24px;
+                height: 24px;
+              }
+
+              &_down {
+                background: #E63946;
+
+                svg {
+                  transform: rotate(90deg);
+                }
+              }
+
+            }
+          }
+
+          .tradeBtn {
+            @include button;
+            width: 88px;
+            height: 44px;
+            background: linear-gradient(138.1deg, #141414 1.63%, #111111 97.51%);
+            border-radius: 4px;
+            @include centerRow();
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 120%;
+          }
+
+        }
+
+
+      }
+
+    }
+
+
+
+  }
+}

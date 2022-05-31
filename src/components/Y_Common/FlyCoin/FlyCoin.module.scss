@@ -1,0 +1,50 @@
+@import "../../../assets/scss/app";
+
+.flyCoin {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+
+  .coinWrapper {
+    position: absolute;
+    //top: 0;
+    //left: 0;
+
+    .coins {
+      position: relative;
+      z-index: 2;
+      display: block;
+      width: 162px;
+      height: 106px;
+    }
+
+    .wingFirstLeft {
+      position: absolute;
+      z-index: 1;
+      top: 11px;
+      left: -24px;
+    }
+
+    .wingFirstRight {
+      position: absolute;
+      z-index: 1;
+      top: 23px;
+      right: 75px;
+    }
+
+    .wingSecondLeft {
+      position: absolute;
+      z-index: 1;
+      top: -24px;
+      right: 24px;
+    }
+
+    .wingSecondRight {
+      position: absolute;
+      z-index: 1;
+      top: -23px;
+      right: -22px;
+    }
+
+  }
+}

@@ -1,0 +1,18 @@
+.circle {
+  animation-name: circleAnimation;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 8800ms;
+}
+
+@keyframes circleAnimation {
+  0% {
+    transform: scale(0);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(50);
+
+    opacity: 0.0;
+  }
+}

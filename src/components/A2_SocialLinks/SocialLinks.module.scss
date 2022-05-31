@@ -1,0 +1,33 @@
+@import "../../assets/scss/app";
+
+.socialLinks {
+  @include onlyDesktop(flex);
+  flex-direction: column;
+  position: fixed;
+  z-index: 100;
+  top: 300px;
+  left: 28px;
+
+  .link {
+    display: block;
+
+    &:not(:first-child) {
+      margin-top: 25px;
+    }
+
+    & > svg {
+      width: 24px;
+      height: 24px;
+
+      path {
+        transition: 0.3s;
+      }
+    }
+
+    &:hover {
+      path {
+        fill: #4056D8;
+      }
+    }
+  }
+}

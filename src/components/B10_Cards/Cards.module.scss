@@ -1,0 +1,36 @@
+@import "../../assets/scss/app";
+
+.cards {
+  @include container;
+  padding-top: 60px;
+  padding-left: 0;
+  padding-right: 0;
+
+  @include desktop {
+    width: auto;
+    padding-top: 170px;
+  }
+
+  .inner {
+    @include inner;
+
+    .sliderMobile {
+      width: 100%;
+      @include onlyMobile;
+
+      .slide {
+        width: 220px;
+        padding-bottom: 19px;
+      }
+    }
+
+
+    .desktopContent {
+      @include onlyDesktop(grid);
+      grid-template-columns: repeat(4, 1fr);
+      grid-column-gap: 35px;
+    }
+
+
+  }
+}

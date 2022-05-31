@@ -1,0 +1,209 @@
+@import "../../assets/scss/app";
+
+.footer {
+  border-top: 1px solid #35363F;
+  @include container;
+  padding-top: 23px;
+  padding-bottom: 30px;
+
+  @include desktop {
+    padding-top: 60px;
+    padding-bottom: 80px;
+  }
+
+  .inner {
+    @include inner;
+
+    @include desktop {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .firstBlock {
+      position: relative;
+      padding-bottom: 30px;
+
+      @include desktop {
+        padding-bottom: 0;
+        border-bottom: none;
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        left: -24px;
+        bottom: 0;
+        right: -24px;
+        height: 1px;
+        background: #35363F;
+
+        @include desktop {
+          display: none;
+        }
+      }
+
+      .logoWrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .logo {
+          display: block;
+          width: 154px;
+          height: 34px;
+
+          @include desktop {
+            width: 208px;
+            height: 46px;
+          }
+        }
+
+        .top {
+          @include onlyMobile(flex);
+          @include centerRow;
+          @include button;
+          width: 40px;
+          height: 40px;
+          border: 1px solid #35363F;
+          border-radius: 7px;
+
+          svg {
+            width: 16px;
+            height: 16px;
+            transform: rotate(90deg);
+
+            path {
+              fill: #35363F;
+            }
+          }
+
+
+        }
+
+      }
+
+      .socialLinks {
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-gap: 30px;
+        width: 270px;
+
+        @include desktop {
+          margin-top: 40px;
+          grid-gap: 24px;
+          width: 208px;
+        }
+
+        .socialLink {
+          svg {
+            width: 30px;
+            height: 30px;
+
+            @include desktop {
+              width: 24px;
+              height: 24px;
+            }
+
+            path {
+              fill: $blue1;
+            }
+          }
+
+          &_switcher svg path {
+            fill: $blue2;
+          }
+        }
+      }
+
+      .copy {
+        width: 220px;
+        @include onlyDesktop();
+        margin-top: 40px;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 140%;
+        color: rgba(255, 255, 255, 0.5);
+      }
+
+    }
+
+    .linksBlock {
+      margin-top: 30px;
+
+      @include desktop {
+        margin-top: 0;
+      }
+
+      &_last {
+        padding-bottom: 30px;
+
+        @include desktop {
+          padding-bottom: 0;
+        }
+      }
+
+      .title {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 140%;
+        color: $blue1;
+
+        &_switcher {
+          color: $blue2;
+        }
+      }
+
+      .links {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+
+        .link {
+          text-decoration: none;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 140%;
+          color: rgba(255, 255, 255, 0.5);
+
+          &:not(:first-child) {
+            margin-top: 16px;
+          }
+        }
+      }
+    }
+
+    .copyBlock {
+      position: relative;
+      @include onlyMobile();
+      padding-top: 30px;
+
+      p {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 140%;
+        color: rgba(255, 255, 255, 0.5);
+        opacity: 0.5;
+      }
+
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        left: -24px;
+        top: 0;
+        right: -24px;
+        height: 1px;
+        background: #35363F;
+
+        @include desktop {
+          display: none;
+        }
+      }
+
+    }
+
+  }
+}

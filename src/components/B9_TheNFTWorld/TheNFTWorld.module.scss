@@ -1,0 +1,103 @@
+@import "../../assets/scss/app";
+
+.theNFTWorld {
+  @include container;
+  padding-top: 133px;
+
+  @include desktop {
+    padding-top: 280px;
+  }
+
+  .inner {
+    @include inner;
+    //border: 1px solid red;
+    position: relative;
+
+    .back {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: linear-gradient(210deg, #FFFFFF -10931.33%, #FEFEFE -10837.85%, #E1E1E1 -8501.04%, #CDCDCD -6164.23%, #C1C1C1 -3827.41%, #BDBDBD -1584.07%);
+      background-blend-mode: overlay;
+      mix-blend-mode: normal;
+      opacity: 0.2;
+      border-radius: 16px;
+    }
+
+    .content {
+      position: relative;
+      z-index: 2;
+      height: 100%;
+      width: 100%;
+      padding: 180px 16px 20px;
+      box-sizing: border-box;
+
+
+      @include desktop {
+        padding: 172px 50px 185px 440px;
+      }
+
+      .img {
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 146px;
+        height: auto;
+
+        @include desktop {
+          width: 480px;
+          top: 50%;
+          left: 0px;
+          transform: translate(0, -50%);
+        }
+
+      }
+
+      .title {
+        @include title;
+        position: absolute;
+        top: -20px;
+        left: 50%;
+        width: 100%;
+        transform: translate(-50%, -100%);
+        text-align: center;
+
+        @include desktop {
+          font-size: 52px;
+          position: relative;
+          top: 0;
+          left: 0;
+          transform: none;
+        }
+      }
+
+      .text {
+        @include description;
+
+        @include desktop {
+          margin-top: 20px;
+          width: 604px;
+          margin-left: auto;
+          margin-right: auto;
+          text-align: center;
+        }
+      }
+
+      .btn {
+        margin-top: 20px;
+
+        @include desktop {
+          margin: 40px auto 0;
+          width: 234px;
+
+        }
+      }
+
+    }
+
+  }
+}

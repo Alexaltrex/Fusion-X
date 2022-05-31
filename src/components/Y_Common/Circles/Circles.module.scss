@@ -1,0 +1,20 @@
+.circlesWrapper {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  transition: 0.6s;
+
+  .circleItem {
+    position: absolute;
+    z-index: 1;
+
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(#468126, #cad020);
+    border-radius: 50%;
+
+    &:nth-child(2n) {
+      background: radial-gradient(#4047cd, #400080);
+    }
+  }
+}

@@ -1,0 +1,670 @@
+@import "../../assets/scss/app";
+
+.firstBlock {
+  @include container;
+  padding-top: 20px;
+
+  @include desktop {
+    padding-top: 40px;
+  }
+
+  .inner {
+    @include inner;
+    position: relative;
+    //border: 1px solid red;
+
+    @include desktop {
+      width: 1180px;
+
+    }
+
+    .contentMobile {
+      margin-top: 20px;
+      @include onlyMobile(flex);
+      flex-direction: column;
+      align-items: center;
+
+      .titleWrapper {
+        overflow: hidden;
+
+        .titleInner {
+          padding: 0px 0;
+          height: 43px;
+          transition: $duration;
+
+          &_switch {
+            transform: translateY(-100%);
+          }
+
+          .title {
+            @include title;
+            height: 43px;
+            text-align: center;
+          }
+
+        }
+      }
+
+      .descriptionWrapper {
+        margin-top: 6px;
+        overflow: hidden;
+
+        .descriptionWrapperInner {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          transition: $duration;
+
+          &_switcher {
+            transform: translateX(-100%);
+          }
+
+          .description {
+            @include description;
+            text-align: center;
+
+            &_second {
+              position: absolute;
+              top: 0;
+              left: 100%;
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+
+
+      }
+
+      .imgWrapper {
+        margin-top: 17px;
+
+        .centeredContent {
+          position: relative;
+          width: 222px;
+          height: 194px;
+          margin: 0 auto;
+
+          .imgBlock {
+            position: relative;
+            overflow: hidden;
+
+            .imgRight, .imgLeft {
+              display: block;
+              width: 222px;
+              height: 194px;
+              transition: $duration;
+            }
+
+            .imgRight {
+              &_switcher {
+                transform: scale(0);
+              }
+            }
+
+            .imgLeft {
+              position: absolute;
+              top: 0;
+              left: 0;
+              transform: scale(0);
+
+              &_switcher {
+                transform: scale(1);
+              }
+            }
+
+
+          }
+
+          .item {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            position: absolute;
+            @include centerColumn;
+
+            .number {
+              font-weight: 700;
+              font-size: 32px;
+              line-height: 140%;
+              text-align: center;
+              color: $blue1;
+              margin-bottom: -6px;
+              transition: $duration;
+
+              &_switcher {
+                color: $blue2;
+              }
+            }
+
+            .text {
+              font-weight: 600;
+              font-size: 12px;
+              line-height: 140%;
+              text-align: center;
+              color: $blue1;
+              transition: $duration;
+
+              &_switcher {
+                color: $blue2;
+              }
+            }
+          }
+
+          .firstItem {
+            width: 90px;
+            height: 90px;
+            left: -25px;
+            top: 0;
+          }
+
+
+          .secondItem {
+            width: 120px;
+            height: 90px;
+            right: -25px;
+            bottom: -16px;
+
+            &_switcher {
+              height: 105px;
+            }
+
+            .content1 {
+              transition: $duration;
+
+              &_switcher {
+                transform: scale(0);
+              }
+            }
+
+            .content2 {
+              @include absoluteStart;
+              @include centerColumn;
+              box-sizing: border-box;
+              padding: 0px 10px;
+              transform: scale(0);
+              transition: $duration;
+
+              &_switcher {
+                transform: scale(1);
+              }
+
+              img {
+                display: block;
+                width: 30px;
+                height: auto;
+                margin-bottom: 7px;
+              }
+            }
+
+          }
+
+          .thirdItem {
+            width: 90px;
+            height: 77px;
+            top: -7px;
+            right: -7px;
+            transition: $duration;
+            opacity: 0;
+            transform: scale(0);
+
+            &_switcher {
+              opacity: 1;
+              transform: scale(1);
+            }
+
+            img {
+              display: block;
+              width: 42px;
+              height: 36px;
+              margin-bottom: 7px;
+            }
+          }
+
+        }
+
+      }
+
+      .btnWrapper {
+        margin-top: 34px;
+        width: 100%;
+        position: relative;
+
+        .btn {
+          width: 270px;
+          margin-left: auto;
+          margin-right: auto;
+          transition: $duration;
+
+          &_hide {
+            transform: scale(0);
+          }
+        }
+
+        .btn2 {
+          width: 270px;
+          position: absolute;
+          top: 0;
+          left: 50%;
+          transition: $duration;
+          transform: translateX(-50%) scale(0);
+
+          &_show {
+            transform: translateX(-50%) scale(1);
+          }
+        }
+      }
+
+    }
+
+    .contentDesktop {
+      position: relative;
+      @include onlyDesktop(flex);
+      height: 500px;
+      margin-top: 60px;
+      align-items: center;
+      justify-content: space-between;
+
+      .imgBlock {
+        z-index: 3;
+        position: absolute;
+        width: 470px;
+        height: 409px;
+        top: 25px;
+        right: 120px;
+        transition: $duration;
+
+        &_switcher {
+          right: 710px;
+        }
+
+        .imgLeft, .imgRight {
+          display: block;
+          width: 470px;
+          height: 409px;
+          transition: $duration;
+        }
+
+        .imgRight {
+          opacity: 0;
+          transform: scale(0);
+
+          &_show {
+            opacity: 1;
+            transform: scale(1);
+          }
+        }
+
+        .imgLeft {
+          position: absolute;
+          top: 0;
+          left: 0;
+
+          &_hide {
+            opacity: 0;
+            transform: scale(0);
+          }
+        }
+      }
+
+      .topItem {
+        z-index: 3;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transition: $duration;
+        width: 296px;
+        height: 92px;
+        perspective: 900px;
+        perspective-origin: center;
+
+        &_switcher {
+          top: 247px;
+          right: 975px;
+          width: 215px;
+          height: 92px;
+        }
+
+        .topItemInner {
+          padding: 0px 20px;
+          height: 100%;
+          transform: rotateY(-30deg);
+          background: rgba(255, 255, 255, 0.9);
+          box-shadow: 6px 5px 20px rgba(255, 255, 255, 0.2);
+          border-radius: 12px;
+          @include centerRow();
+          transition: $duration;
+          position: relative;
+
+          &_switcher {
+            transform: rotateY(30deg);
+          }
+
+          .content1, .content2 {
+            @include centerRow();
+            transition: $duration;
+          }
+
+          .content1 {
+
+            &_hide {
+              opacity: 0;
+            }
+          }
+
+          .content2 {
+            @include absoluteCenter;
+            opacity: 0;
+
+            &_show {
+              opacity: 1;
+            }
+          }
+
+          .number {
+            font-weight: 700;
+            font-size: 40px;
+            line-height: 140%;
+            color: $blue1;
+          }
+
+          .text {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 140%;
+            color: $blue1;
+            margin-left: 16px;
+          }
+
+
+        }
+
+      }
+
+      .middleItem {
+        z-index: 3;
+        position: absolute;
+        top: 247px;
+        right: 385px;
+        transition: $duration;
+        width: 235px;
+        height: 92px;
+        perspective: 900px;
+        perspective-origin: center;
+
+        &_switcher {
+          top: 0;
+          right: 630px;
+          width: 286px;
+          height: 92px;
+
+        }
+
+        .middleItemInner {
+          padding: 0 20px;
+          height: 100%;
+          transform: rotateY(30deg);
+          background: rgba(255, 255, 255, 0.9);
+          box-shadow: 6px 5px 20px rgba(255, 255, 255, 0.2);
+          border-radius: 12px;
+          @include centerRow();
+          transition: $duration;
+          position: relative;
+
+          &_switcher {
+            transform: rotateY(-30deg);
+          }
+
+          .content1, .content2 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: $duration;
+          }
+
+          .content1 {
+
+            &_hide {
+              opacity: 0;
+            }
+          }
+
+          .content2 {
+            @include absoluteCenter;
+            opacity: 0;
+
+            .text {
+              width: 170px;
+            }
+
+            &_show {
+              opacity: 1;
+            }
+          }
+
+          .number {
+            font-weight: 700;
+            font-size: 40px;
+            line-height: 140%;
+            color: $blue1;
+            margin-right: 16px;
+          }
+
+          .text {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 140%;
+            color: $blue1;
+          }
+
+          .secure {
+            display: block;
+            width: 50px;
+            height: 50px;
+            margin-right: 25px;
+          }
+
+
+        }
+
+      }
+
+      .bottomItem {
+        z-index: 3;
+        position: absolute;
+        top: 400px;
+        right: 0;
+        transition: $duration;
+        width: 288px;
+        height: 93px;
+        perspective: 900px;
+        perspective-origin: center;
+        opacity: 0;
+
+        &_switcher {
+          right: 625px;
+          opacity: 1;
+        }
+
+        .bottomItemInner {
+          height: 100%;
+          transform: rotateY(-30deg);
+          background: rgba(205, 205, 205, 0.2);
+          border-radius: 12px;
+
+          @include centerRow();
+          transition: $duration;
+          position: relative;
+
+          .text {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 140%;
+            color: #FFF;
+          }
+
+          .bottomItemImg {
+            position: absolute;
+            left: -45px;
+            bottom: -15px;
+            width: 88px;
+            height: 88px;
+          }
+
+        }
+
+      }
+
+      .leftInfoBlock {
+        width: 510px;
+
+        .title {
+          overflow: hidden;
+          position: relative;
+          z-index: 3;
+
+          .titleInner {
+            @include title;
+            transition: $duration;
+
+            &_hide {
+              transform: translateY(100%);
+            }
+          }
+        }
+
+        .descriptionBlock {
+          margin-top: 30px;
+          position: relative;
+          z-index: 3;
+
+          .description {
+            overflow: hidden;
+
+            .descriptionInner {
+              @include description;
+              transition: $duration;
+
+              &_hide {
+                transform: translateY(100%);
+              }
+            }
+          }
+        }
+
+        .btnWrapper {
+          margin-top: 36px;
+          width: 200px;
+          position: relative;
+
+          .btn {
+            position: relative;
+            z-index: 2;
+            transition: $duration;
+
+            &_hide {
+              opacity: 0;
+              user-select: none;
+              cursor: auto;
+              transform: scale(0);
+            }
+
+            &:hover + .circles {
+              opacity: 1;
+            }
+          }
+
+          .circles {
+            top: 30px;
+            left: 100px;
+            z-index: 1;
+            opacity: 0;
+            transition: 0.6s;
+          }
+        }
+
+      }
+
+      .rightInfoBlock {
+        width: 510px;
+
+        .title {
+          position: relative;
+          z-index: 3;
+          overflow: hidden;
+
+          .titleInner {
+            @include title;
+            transition: $duration;
+            transform: translateY(100%);
+
+            &_show {
+              transform: translateY(0);
+            }
+          }
+        }
+
+        .descriptionBlock {
+          position: relative;
+          z-index: 3;
+          margin-top: 30px;
+
+          .description {
+            overflow: hidden;
+
+            .descriptionInner {
+              @include description;
+              transition: $duration;
+              transform: translateY(100%);
+
+              &_show {
+                transform: translateY(0);
+              }
+            }
+          }
+        }
+
+        .btnWrapper {
+          margin-top: 36px;
+          width: 200px;
+          position: relative;
+
+          .btn {
+            position: relative;
+            z-index: 2;
+            opacity: 0;
+            cursor: auto;
+            transform: scale(0);
+            transition: $duration;
+
+            &_show {
+              opacity: 1;
+              cursor: pointer;
+              transform: scale(1);
+            }
+
+            &:hover + .circles {
+              opacity: 1;
+            }
+          }
+
+          .circles {
+            top: 30px;
+            left: 100px;
+            z-index: 1;
+            opacity: 0;
+            transition: 0.6s;
+          }
+        }
+
+
+
+
+
+      }
+
+    }
+
+  }
+
+
+}

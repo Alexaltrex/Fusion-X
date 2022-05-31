@@ -1,0 +1,119 @@
+@import "../../assets/scss/app";
+
+.tradeAnywhere {
+  //overflow-x: hidden;
+  position: relative;
+  z-index: 1;
+  @include container;
+  padding-top: 60px;
+
+  @include desktop {
+    padding-top: 160px;
+  }
+
+  &_switcher {
+    padding-top: 80px;
+
+    @include desktop {
+      padding-top: 300px;
+    }
+  }
+
+  .inner {
+    position: relative;
+    @include inner;
+
+    .star {
+      position: absolute;
+      transition: 0.2s;
+      z-index: 1;
+      width: 176px;
+      height: 176px;
+      left: 170px;
+      top: -75px;
+
+      @include desktop {
+        width: 512px;
+        height: 512px;
+        left: 180px;
+        top: -310px;
+      }
+
+      svg {
+        width: 176px;
+        height: 176px;
+
+        @include desktop {
+          width: 512px;
+          height: 512px;
+        }
+      }
+    }
+
+    .figure {
+      position: absolute;
+      bottom: -210px;
+      right: -140px;
+      transition: 0.2s;
+      z-index: 1;
+      width: 293px;
+      height: auto;
+      transform-origin: 175px 125px;
+
+      @include desktop {
+        width: 655px;
+        bottom: -210px;
+        right: -80px;
+        transform-origin: 390px 290px;
+      }
+    }
+
+    .title {
+      position: relative;
+      z-index: 2;
+      @include title;
+      @include desktop {
+        width: 440px;
+      }
+    }
+
+    .description {
+      position: relative;
+      z-index: 2;
+      @include description;
+      margin-top: 10px;
+
+      @include desktop {
+        margin-top: 20px;
+      }
+
+    }
+
+    .buttons {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+
+      @include desktop {
+        margin-top: 50px;
+        flex-direction: row;
+      }
+
+      button {
+        @include desktop {
+          width: 240px;
+        }
+
+        &:last-child {
+          margin-top: 20px;
+
+          @include desktop {
+            margin-top: 0;
+            margin-left: 36px;
+          }
+        }
+      }
+    }
+
+  }
+}

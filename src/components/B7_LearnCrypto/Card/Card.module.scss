@@ -1,0 +1,131 @@
+@import "../../../assets/scss/app";
+
+.card {
+  position: relative;
+  box-sizing: border-box;
+  padding: 0;
+  height: 430px;
+  width: 272px;
+
+  @include desktop {
+    padding: 0 20px;
+    //border-left: 1px solid red;
+    height: 433px;
+    width: auto;
+  }
+
+  &:first-child::before {
+    content: "";
+    display: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 1px;
+    height: 100%;
+    background: radial-gradient(rgba(133, 134, 146, 1), rgba(39, 39, 41, 0.3));
+
+    @include desktop {
+      display: block;
+    }
+  }
+
+  &::after {
+    content: "";
+    display: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 1px;
+    height: 100%;
+    background: radial-gradient(rgba(133, 134, 146, 1), rgba(39, 39, 41, 0.3));
+
+    @include desktop {
+      display: block;
+    }
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+
+    //height: 189px;
+
+    @include desktop {
+      //width: 290px;
+    }
+  }
+
+  .title {
+    margin-top: 16px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 140%;
+    color: $blue1;
+
+    &_switcher {
+      color: $blue2;
+    }
+  }
+
+  .date {
+    margin-top: 10px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 140%;
+    color: rgba(255, 255, 255, 0.5);
+
+    @include desktop {
+      font-size: 16px;
+    }
+  }
+
+  .text {
+    margin-top: 10px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 140%;
+
+    @include desktop {
+      font-size: 16px;
+    }
+  }
+
+  .btn {
+    @include button;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+
+    @include desktop {
+      left: 20px;
+    }
+
+    p {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 140%;
+      color: $blue1;
+    }
+
+    svg {
+      margin-left: 10px;
+      transform: translateY(2px);
+    }
+
+    &_switcher {
+      p {
+        color: $blue2;
+      }
+      svg path {
+        fill: $blue2;
+      }
+    }
+
+  }
+
+}

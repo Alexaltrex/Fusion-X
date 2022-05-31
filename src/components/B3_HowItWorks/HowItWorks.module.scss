@@ -1,0 +1,131 @@
+@import "../../assets/scss/app";
+
+.howItWorks {
+  @include container;
+  padding-top: 60px;
+
+  @include desktop {
+    padding-top: 160px;
+  }
+
+  .inner {
+    @include inner;
+
+    .title {
+      @include title;
+      text-align: center;
+    }
+
+    .items {
+      margin-top: 20px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      grid-gap: 24px;
+
+      @include desktop {
+        margin-top: 40px;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        grid-gap: 0;
+      }
+
+      .item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+
+        &:not(:last-child) {
+          &::after {
+            position: absolute;
+            display: none;
+            content: "";
+            right: 0;
+            top: 50%;
+            width: 1px;
+            height: 329px;
+            transform: translate(0, -50%);
+            //background: red;
+            background: radial-gradient(rgba(133, 134, 146, 1), rgba(39, 39, 41, 0.3));
+
+            @include desktop {
+              display: block;
+            }
+          }
+        }
+
+        .imgWrapper {
+          @include centerRow;
+          background: rgba(0, 0, 0, 0.2);
+          border-radius: 50%;
+          width: 124px;
+          height: 124px;
+
+          @include desktop {
+            width: 204px;
+            height: 204px;
+          }
+
+          img {
+            display: block;
+          }
+        }
+
+        p {
+          margin-top: 10px;
+          font-weight: 600;
+          font-size: 15px;
+          line-height: 130%;
+          text-align: center;
+          letter-spacing: 0.04em;
+
+          @include desktop {
+            margin-top: 30px;
+            font-size: 28px;
+          }
+        }
+
+        &:nth-child(1) .imgWrapper img {
+          width: 45px;
+          height: 52px;
+
+          @include desktop() {
+            width: 85px;
+            height: 100px;
+          }
+        }
+
+        &:nth-child(2) .imgWrapper img {
+          width: 61px;
+          height: 61px;
+
+          @include desktop() {
+            width: 106px;
+            height: 106px;
+          }
+        }
+
+        &:nth-child(3) .imgWrapper img {
+          width: 63px;
+          height: 63px;
+
+          @include desktop() {
+            width: 108px;
+            height: 108px;
+          }
+        }
+
+        &:nth-child(4) .imgWrapper img {
+          width: 64px;
+          height: 64px;
+
+          @include desktop() {
+            width: 116px;
+            height: 116px;
+          }
+        }
+      }
+    }
+  }
+}
