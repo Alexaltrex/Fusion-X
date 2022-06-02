@@ -45,8 +45,13 @@
       @include centerRow;
       width: 40px;
       height: 40px;
-      background: #4056D8;
+      background: $blue1;
       border-radius: 7px;
+      transition: $duration;
+
+      &_switcher {
+        background: $blue2;
+      }
     }
 
     .btnPopover {

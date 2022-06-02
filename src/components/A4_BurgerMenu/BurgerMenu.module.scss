@@ -1,0 +1,52 @@
+@import "../../assets/scss/app";
+
+.burgerMenu {
+  @include onlyMobile();
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #000;
+  transform: translateX(-100%);
+  transition: 0.3s;
+  z-index: 888;
+
+  &_open {
+    transform: translateX(0%);
+  }
+
+  .inner {
+    position: relative;
+    padding-top: 80px;
+    overflow: auto;
+    height: 100vh;
+    box-sizing: border-box;
+
+
+    .listItem {
+      margin-top: 20px;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 140%;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .block {
+      padding: 20px 24px;
+      border-bottom: 1px solid #35363F;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 140%;
+    }
+
+    .btnWrapper {
+      padding: 40px 24px;
+    }
+
+  }
+
+
+
+
+}

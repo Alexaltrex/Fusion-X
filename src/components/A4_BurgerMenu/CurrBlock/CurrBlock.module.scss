@@ -1,0 +1,43 @@
+@import "../../../assets/scss/app";
+
+.currBlock {
+  padding: 20px 24px;
+  border-bottom: 1px solid #35363F;
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .title {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 140%;
+      transition: 0.3s;
+    }
+
+    svg {
+      transition: 0.3s;
+      width: 28px;
+      height: 28px;
+    }
+
+
+    &_open {
+      .title {
+        color: $blue1;
+      }
+
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  .item {
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 140%;
+  }
+}

@@ -9,17 +9,17 @@ import {ButtonCustom} from "../Y_Common/ButtonCustom/ButtonCustom";
 import {useAppDispatch, useAppSelector} from "../../store/hooks";
 import {
     CurrencyType,
-    LangType,
+    LangType, selectBurgerMenu,
     selectCurrency,
     selectLang,
     selectSwitcher,
+    setBurgerMenu,
     setCurrency,
     setLang
 } from "../../store/appSlice";
-import {FC, useEffect, useState} from "react";
-import {throttle} from "../../helper/throttle";
+import {FC} from "react";
 
-const tradeList = [
+export const tradeList = [
     "Classic",
     "Advanced",
     "Margin",
@@ -28,7 +28,7 @@ const tradeList = [
     "Futures",
 ];
 
-const langs = {
+export const langs = {
     "Chi": {
         lang: "Chi",
         icon: svgIcons.langChi
@@ -43,7 +43,7 @@ const langs = {
     },
 }
 
-const currencies = [
+export const currencies = [
     "TRY",
     "TWD",
     "USD",
@@ -86,7 +86,6 @@ export const Header: FC<IHeader> = ({pageYOffset}) => {
     };
     const onCloseCurrency = () => setAnchorCurrency(null);
 
-
     const dispatch = useAppDispatch();
     const langSelected = useAppSelector(selectLang);
     const currency = useAppSelector(selectCurrency);
@@ -94,6 +93,9 @@ export const Header: FC<IHeader> = ({pageYOffset}) => {
     const delta = 50;
 
     const switcher = useAppSelector(selectSwitcher);
+
+    const burgerMenu = useAppSelector(selectBurgerMenu);
+
 
     return (
         <header className={style.header}>
@@ -104,9 +106,16 @@ export const Header: FC<IHeader> = ({pageYOffset}) => {
             })}/>
 
             <div className={style.inner}>
-                <button className={style.btn}>
-                    {svgIcons.menu}
+
+                <button className={clsx({
+                    [style.btn]: true,
+                    [style.btn_switcher]: switcher,
+                })}
+                        onClick={() => dispatch(setBurgerMenu(!burgerMenu))}
+                >
+                    {burgerMenu ? svgIcons.menu_close : svgIcons.menu_open}
                 </button>
+
 
                 <div className={style.left}>
 
@@ -332,7 +341,10 @@ export const Header: FC<IHeader> = ({pageYOffset}) => {
                 </div>
 
 
-                <button className={style.btn}>
+                <button className={clsx({
+                    [style.btn]: true,
+                    [style.btn_switcher]: switcher,
+                })}>
                     {svgIcons.profits}
                 </button>
             </div>

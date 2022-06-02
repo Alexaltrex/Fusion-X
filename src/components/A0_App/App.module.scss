@@ -6,9 +6,27 @@
   padding-top: 80px;
   background: #000;
   transition: $duration;
+  box-sizing: border-box;
 
   @include desktop {
     padding-top: 118px;
+  }
+
+  &_burgerMenu {
+    height: 100vh;
+  }
+
+  .cursorBall {
+    @include onlyDesktop();
+    pointer-events: none;
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    background: #FFF;
+    border-radius: 50%;
   }
 
   .back1 {
@@ -50,34 +68,9 @@
     opacity: 0.4;
   }
 
-  .conic {
-    position: fixed;
-    //transition: $duration;
-    z-index: 3;
-    top: -100vh;
-    left: -100vw;
-    bottom: -100vh;
-    right: -100vw;
-    opacity: 0.7;
-    background: conic-gradient(
-                    #b76300, darkblue,
-                    #b76300, darkblue,
-                    #b76300, darkblue,
-                    #b76300, darkblue,
-                    #b76300, darkblue,
-                    #b76300, darkblue,
-                    #b76300, darkblue,
-                    #b76300, darkblue,
-                    #b76300
-    );
-
-  }
-
   .content {
-    height: 100%;
-    width: 100%;
     position: relative;
-    z-index: 4;
+    z-index: 111;
   }
 
 
