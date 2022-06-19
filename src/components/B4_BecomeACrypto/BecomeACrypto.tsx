@@ -4,6 +4,7 @@ import {ButtonCustom} from "../Y_Common/ButtonCustom/ButtonCustom";
 import img0 from "../../assets/png/Become a crypto/0.png";
 import img1 from "../../assets/png/Become a crypto/1.png";
 import img2 from "../../assets/png/Become a crypto/2.png";
+import back from "../../assets/png/Become a crypto/back.png";
 import {FC, useEffect, useRef, useState} from "react";
 import {useMediaQuery} from "@mui/material";
 
@@ -83,6 +84,7 @@ export const BecomeACrypto: FC<IBecomeACrypto> = ({x, y}) => {
                                              : {}
                                      }
                                 >
+                                    <img src={back} alt="" className={style.back}/>
                                     <p className={style.label}>{label}</p>
                                     <img className={style.img} src={img} alt=""/>
                                 </div>

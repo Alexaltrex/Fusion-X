@@ -37,11 +37,11 @@
       }
 
       .btn {
-        margin-top: 20px;
+        margin: 20px auto 0;
         width: 270px;
 
         @include desktop {
-          margin-top: 50px;
+          margin: 50px 0 0;
           width: 200px;
         }
       }
@@ -80,29 +80,37 @@
           }
         }
 
-
         .cardInner {
-
-          transition: 0.3s;
-
           @include centerRow;
           position: relative;
           z-index: 2;
           width: 300px;
           height: 66px;
           background: none;
-          background: #FFFFFF;
-          box-shadow: 15px 15px 40px rgba(255, 255, 255, 0.2);
           border-radius: 6px;
+          transition: 0.3s;
 
           @include desktop {
             background: #FFFFFF;
+            box-shadow: 15px 15px 40px rgba(255, 255, 255, 0.2);
             width: 425px;
             height: 147px;
             border-radius: 12px;
           }
 
+          .back {
+            @include onlyMobile();
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+          }
+
           .label {
+            position: relative;
+            z-index: 2;
             font-weight: 600;
             font-size: 24px;
             line-height: 140%;
@@ -116,6 +124,7 @@
           .img {
             position: absolute;
             transform: none;
+            z-index: 2;
           }
 
         }
@@ -123,7 +132,7 @@
         &:nth-child(1) {
 
           .cardInner {
-            transform: rotateY(-45deg);
+            //transform: rotateY(-45deg);
             @include desktop {
               transform: rotateY(0);
             }
@@ -151,12 +160,16 @@
         &:nth-child(2) {
 
           .cardInner {
-            transform: rotateY(45deg);
+            //transform: rotateY(45deg);
 
             @include desktop {
               transform: rotateY(0);
               background: rgba(205,205,205,0.2);
               box-shadow: none;
+            }
+
+            .back {
+              transform: rotate(180deg);
             }
           }
 
@@ -180,7 +193,7 @@
         &:nth-child(3) {
 
           .cardInner {
-            transform: rotateY(-45deg);
+            //transform: rotateY(-45deg);
             @include desktop {
               transform: rotateY(0);
             }
